@@ -1,0 +1,20 @@
+[
+  {
+    "name": "View list",
+    "steps": [
+      {
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": {
+              "text": "Display the user's current watchlist with per-coin actions"
+            }
+          }
+        ],
+        "send": {
+          "callback": "view_list:show"
+        }
+      }
+    ]
+  }
+]
