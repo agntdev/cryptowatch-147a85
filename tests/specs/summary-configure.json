@@ -1,19 +1,17 @@
 [
   {
-    "name": "Morning summary",
+    "name": "Morning summary shows disabled state",
     "steps": [
       {
+        "send": { "callback": "summary:configure" },
         "expect": [
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Enable/disable and configure the daily morning summary"
+              "text": "🌅 Morning summary\n\nStatus: Disabled\nTime: 08:00"
             }
           }
-        ],
-        "send": {
-          "callback": "summary:configure"
-        }
+        ]
       }
     ]
   }

@@ -1,19 +1,17 @@
 [
   {
-    "name": "Settings",
+    "name": "Settings shows current configuration",
     "steps": [
       {
+        "send": { "callback": "settings:open" },
         "expect": [
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Access quiet hours, alert cooldown, and morning summary configuration"
+              "text": "⚙️ Settings\n\nTime zone: UTC\nQuiet hours: 22:00 – 7:00\nAlert cooldown: 30 min"
             }
           }
-        ],
-        "send": {
-          "callback": "settings:open"
-        }
+        ]
       }
     ]
   }
