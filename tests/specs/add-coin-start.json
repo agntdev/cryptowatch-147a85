@@ -1,19 +1,17 @@
 [
   {
-    "name": "Add coin",
+    "name": "Add coin shows common coins and custom option",
     "steps": [
       {
+        "send": { "callback": "add_coin:start" },
         "expect": [
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Open the coin addition flow with inline buttons for common coins and input for custom tickers"
+              "text": "Choose a coin to add, or enter a custom ticker:"
             }
           }
-        ],
-        "send": {
-          "callback": "add_coin:start"
-        }
+        ]
       }
     ]
   }
